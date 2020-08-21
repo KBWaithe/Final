@@ -1,9 +1,9 @@
 {
   "name": "comp125-m2020-finaltest",
   "version": "1.0.0",
-  "description": "COMP125 - Final Test Template Project",
+  "description": "COMP125 - Final Exam - Dice Roller",
   "main": "game.js",
-  "author": "Tom Tsiliopoulos",
+  "author": "Kris Waithe",
   "license": "MIT",
   "dependencies": {
     "createjs": "^1.0.1",
@@ -15,7 +15,8 @@
   "devDependencies": {
     "@types/easeljs": "^1.0.0",
     "@types/preloadjs": "^0.6.32",
-    "@types/soundjs": "^0.6.27",
-    "@types/tweenjs": "^1.0.0"
-  }
+    "@types/soundjs": "^0.6.28",
+    "@types/tweenjs": "^1.0.1"
+  },
+  "repository": "https://github.com/KBWaithe/Final.git"
 }

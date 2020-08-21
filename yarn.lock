@@ -22,7 +22,7 @@
   dependencies:
     "@types/createjs-lib" "*"
 
-"@types/soundjs@^0.6.27":
+"@types/soundjs@^0.6.28":
   version "0.6.28"
   resolved "https://registry.yarnpkg.com/@types/soundjs/-/soundjs-0.6.28.tgz#cf748e90dd78f66c3f54fab41536f60a42c8c002"
   integrity sha512-K3ktwPvYfQrH+qGEe1tgxC5o4rJC7CVxQmL9Cz9tgVq0oW99PmPfRp1F7YXELibCvV3lieD4E0sUZvnDEKWaPg==
@@ -30,7 +30,7 @@
     "@types/createjs-lib" "*"
     "@types/preloadjs" "*"
 
-"@types/tweenjs@*", "@types/tweenjs@^1.0.0":
+"@types/tweenjs@*", "@types/tweenjs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/tweenjs/-/tweenjs-1.0.1.tgz#aa32347004ec91bb1cc6a6b3c50b24a45fdff5cd"
   integrity sha512-iBxS3evVrsrTfG/CgIKGT6RyM470NtLF/ybhCQQ1NkqokDxcRp5sF58XUwwXGzenYqG7H+njOnmCvCyG9wmgvg==
