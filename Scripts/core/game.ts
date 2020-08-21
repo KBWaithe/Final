@@ -112,10 +112,10 @@ let Game = (function(){
             diceResultLabel = new UIObjects.Label(diceResults.toString (), "35px", "Consolas", "#000000", Config.Game.CENTER_X, Config.Game.CENTER_Y + 90, true);
             
             /* Linking the designs for the dice to the dice object */
-            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
+            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 180, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignOne);
             
-            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
+            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 120, true);
             stage.addChild(diceDesignTwo);
         });
     }
