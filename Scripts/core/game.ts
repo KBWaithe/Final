@@ -17,6 +17,7 @@ let Game = (function(){
     
     /* Buttons */
     let rollButton: UIObjects.Button;
+    let startOverButton: UIObjects.Button;
        
     /* Instead of deleting the other assets, I commented them out just in case I could utilize them later on */
     let assetManifest = 
@@ -35,8 +36,8 @@ let Game = (function(){
         //{id:"placeholder", src:"./Assets/images/placeholder.png"},
         //{id:"resetButton", src:"./Assets/images/resetButton.png"},
         {id:"rollButton", src:"./Assets/images/rollButton.png"},
-        //{id:"startButton", src:"./Assets/images/startButton.png"},
-        //{id:"startOverButton", src:"./Assets/images/startOverButton.png"}
+        {id:"startButton", src:"./Assets/images/startButton.png"},
+        {id:"startOverButton", src:"./Assets/images/startOverButton.png"}
     ];
 
     function Preload():void
@@ -92,7 +93,10 @@ let Game = (function(){
         rollButton = new UIObjects.Button("rollButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
         stage.addChild(rollButton);
 
+        startOverButton = new UIObjects.Button("startOverButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
+        stage.addChild(rollButton);
         rollButton.on("click", ()=>{
+
             console.log("The dice have been cast.");
             let ranNumGenOne = generateRandomNumber();
             let ranNumGenTwo = generateRandomNumber();
@@ -105,19 +109,25 @@ let Game = (function(){
             diceOneLabel = new UIObjects.Label(ranNumGenOne.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y + 100, true);
             stage.addChild(diceOneLabel);
             
-            diceTwoLabel = new UIObjects.Label(ranNumGenTwo.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y + 100, true);
+            diceTwoLabel = new UIObjects.Label(ranNumGenTwo.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y + 100, true);
             stage.addChild(diceTwoLabel);
 
             /* Linking results to the result label */
             diceResultLabel = new UIObjects.Label(diceResults.toString (), "35px", "Consolas", "#000000", Config.Game.CENTER_X, Config.Game.CENTER_Y + 90, true);
             
             /* Linking the designs for the dice to the dice object */
-            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 180, Config.Game.CENTER_Y - 110, true);
+            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignOne);
             
-            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 120, true);
+            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignTwo);
         });
+
+        diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
+        stage.addChild(diceDesignOne);
+        diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
+            stage.addChild(diceDesignTwo);
+        
     }
 
     window.addEventListener('load', Preload);
