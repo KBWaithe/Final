@@ -84,42 +84,42 @@ let Game = (function () {
             let diceResults = ranNumGenOne + ranNumGenTwo;
 
             /* Clear the labels, dice designs and results in order to reroll */
-            stage.removeChild(diceOneLabel, diceTwoLabel, diceDesignOne, diceDesignTwo, diceResultLabel)
+            stage.removeChild(diceOneLabel, diceTwoLabel, diceDesignOne, diceDesignTwo, diceResultLabel);
             
             /* Linking first and second RNG functions to respective labels then appending the labels to the stage */
-            diceOneLabel = new UIObjects.Label(ranNumGenOne.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X - 200, Config.Game.CENTER_Y, true);
+            diceOneLabel = new UIObjects.Label(ranNumGenOne.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y, true);
             stage.addChild(diceOneLabel);
             
-            diceTwoLabel = new UIObjects.Label(ranNumGenTwo.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X + 200, Config.Game.CENTER_Y, true);
+            diceTwoLabel = new UIObjects.Label(ranNumGenTwo.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y, true);
             stage.addChild(diceTwoLabel);
 
             /* Linking results to the result label */
             diceResultLabel = new UIObjects.Label(diceResults.toString (), "35px", "Consolas", "#000000", Config.Game.CENTER_X, Config.Game.CENTER_Y + 30, true);
             
             /* Linking the designs for the dice to the dice object */
-            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 200, Config.Game.CENTER_Y - 110, true);
+            diceDesignOne = new Core.GameObject(ranNumGenOne.toString(), Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignOne);
             
-            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X + 200, Config.Game.CENTER_Y - 110, true);
+            diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignTwo);
         });
         /* loads Dice upon game starting */
-        
-        diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 200, Config.Game.CENTER_Y - 110, true);
+
+        diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
         stage.addChild(diceDesignOne);
         
-        diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 200, Config.Game.CENTER_Y - 110, true);
+        diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
         stage.addChild(diceDesignTwo);
 
         startOverButton.on("click", ()=>
         {
             console.log("StartOverButton has been clicked");
-            stage.removeChild(diceOneLabel, diceTwoLabel, diceDesignOne, diceDesignTwo, diceResultLabel)
+            stage.removeChild(diceOneLabel, diceTwoLabel, diceDesignOne, diceDesignTwo, diceResultLabel);
             
-            diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 200, Config.Game.CENTER_Y - 110, true);
+            diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignOne);
 
-            diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 200, Config.Game.CENTER_Y - 110, true);
+            diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignTwo);
 
         });
