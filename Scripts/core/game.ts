@@ -1,3 +1,7 @@
+/* Kris Waithe - 300637474 - COMP125 
+Final Exam - Dice Roller 
+August 21st 2020 
+*/
 let Game = (function(){
 
     // variable declarations
@@ -122,6 +126,7 @@ let Game = (function(){
             diceDesignTwo = new Core.GameObject(ranNumGenTwo.toString(), Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignTwo);
         });
+        /* Loads dice upon game starting */
 
         diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
         stage.addChild(diceDesignOne);

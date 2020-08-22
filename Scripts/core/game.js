@@ -1,3 +1,7 @@
+/* Kris Waithe - 300637474 - COMP125 
+Final Exam - Dice Roller 
+August 21st 2020 
+*/
 "use strict";
 let Game = (function () {
     // variable declarations
