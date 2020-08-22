@@ -90,10 +90,10 @@ let Game = (function(){
         console.log(`%c Main Function`, "color: green; font-size: 14px; font-weight: bold;");
 
         /* Button Functionality first */
-        rollButton = new UIObjects.Button("rollButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
+        rollButton = new UIObjects.Button("rollButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 80, true);
         stage.addChild(rollButton);
 
-        startOverButton = new UIObjects.Button("startOverButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
+        startOverButton = new UIObjects.Button("startOverButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 190, true);
         stage.addChild(rollButton);
         rollButton.on("click", ()=>{
 
@@ -125,8 +125,21 @@ let Game = (function(){
 
         diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 190, Config.Game.CENTER_Y - 110, true);
         stage.addChild(diceDesignOne);
+        
         diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 190, Config.Game.CENTER_Y - 110, true);
+        stage.addChild(diceDesignTwo);
+
+        startOverButton.on("click", ()=>
+        {
+            console.log("StartOverButton has been clicked");
+            stage.removeChild(diceOneLabel, diceTwoLabel, diceDesignOne, diceDesignTwo, diceResultLabel)
+            
+            diceDesignOne = new Core.GameObject("startButton", Config.Game.CENTER_X - 200, Config.Game.CENTER_Y - 110, true);
+            stage.addChild(diceDesignOne);
+
+            diceDesignTwo = new Core.GameObject("startButton", Config.Game.CENTER_X + 200, Config.Game.CENTER_Y - 110, true);
             stage.addChild(diceDesignTwo);
+        });
         
     }
 
